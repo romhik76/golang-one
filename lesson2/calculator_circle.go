@@ -2,17 +2,16 @@ package main
 
 import (
 	"fmt"
+	"math"
 )
 
 func circle() {
-	const pi = 3.14
 
-	var s float32
+	var s float64
 	fmt.Println("Введите площадь окружности: ")
 	fmt.Scan(&s)
-	a := (s / pi) / (s / pi)
-	d := 2 * a
-	с := d * pi
+	d := math.Sqrt(s / math.Pi)
+	с := d * math.Pi
 	fmt.Println(" диамитер окружности равен: ", d, "\n", "длинна окружности равна: ", с)
 }
 
