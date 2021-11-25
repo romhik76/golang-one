@@ -10,7 +10,7 @@ func circle() {
 	var s float64
 	fmt.Println("Введите площадь окружности: ")
 	fmt.Scan(&s)
-	d := math.Sqrt(s / math.Pi)
+	d := 2 * math.Sqrt(s/math.Pi)
 	с := d * math.Pi
 	fmt.Println(" диамитер окружности равен: ", d, "\n", "длинна окружности равна: ", с)
 }
