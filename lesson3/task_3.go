@@ -2,11 +2,12 @@ package main
 
 import (
 	"fmt"
+	"math"
 	"os"
 )
 
 func calculator() {
-	fmt.Println("Введите первое число: ")
+	fmt.Println("Введите первое значение: ")
 	var a float64
 	_, err := fmt.Scanf("%f", &a)
 	if err != nil {
@@ -14,7 +15,7 @@ func calculator() {
 		return
 	}
 
-	fmt.Println("Введите второе число: ")
+	fmt.Println("Введите второе значение: ")
 	var b float64
 	_, err = fmt.Scanf("%f", &b)
 	if err != nil {
@@ -22,7 +23,7 @@ func calculator() {
 		return
 	}
 
-	println("Введите оператор (+, -, *, /): ")
+	println("Введите оператор (+, -, *, /, ^(возведение в степень a=возводимое число,b=степень): ")
 	var operation string
 	_, err = fmt.Scan(&operation)
 	if err != nil {
@@ -45,12 +46,15 @@ func calculator() {
 			fmt.Println("Данная операция не может быть выполнена")
 			return
 		}
+	case "^":
+		result = math.Pow(a, b)
+
 	default:
 		println("некорректная операция!")
 		os.Exit(1)
 	}
 
-	fmt.Println("Результат вычисления равен:", result)
+	fmt.Printf("Результат вычисления равен: %.2f\n", result)
 }
 func main() {
 	calculator()
