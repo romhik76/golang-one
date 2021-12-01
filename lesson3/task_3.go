@@ -2,101 +2,56 @@ package main
 
 import (
 	"fmt"
-	"log"
 	"os"
-	"strings"
 )
 
-const (
-	UserName = "Roman"
-)
-
-func getGreetingMessage(names []string) (string, error) {
-
-	if len(names) == 0 {
-		return "", fmt.Errorf("Нет больше имен")
-	}
-
-	namesClean := make([]string, 0)
-	for _, name := range names {
-		if name == "" {
-			continue
-		}
-		namesClean = append(namesClean, name)
-	}
-
-	s := fmt.Sprintln("hallo " + strings.Join(names, ", ") + "!")
-	s += fmt.Sprintln("task_3")
-	return s, nil
-}
-
-func SayHello() {
-	var message string
-	var err error
-
-	if message, err = getGreetingMessage([]string{UserName, "Alex", "Sergey", "Artemis", "Evgen"}); err != nil {
-		log.Printf(err.Error())
-		os.Exit(1)
-	}
-	fmt.Println(message)
-
-}
-
-func Calc() {
-	fmt.Println("Введите два операнта (через пробел)")
-	var operand1, operand2 float64
-	_, err := fmt.Scanf("%f %f", &operand1, &operand2)
+func calculator() {
+	fmt.Println("Введите первое число: ")
+	var a float64
+	_, err := fmt.Scanf("%f", &a)
 	if err != nil {
-		fmt.Print("введен неверый операнд")
+		fmt.Println("Введен неверный операнд")
 		return
-	} // todo validate
+	}
 
-	fmt.Println("Введиет операцю:")
+	fmt.Println("Введите второе число: ")
+	var b float64
+	_, err = fmt.Scanf("%f", &b)
+	if err != nil {
+		fmt.Println("Введен неверный операнд")
+		return
+	}
+
+	println("Введите оператор (+, -, *, /): ")
 	var operation string
 	_, err = fmt.Scan(&operation)
 	if err != nil {
-		fmt.Print("Операция не введена")
+		fmt.Println("Введен неверный оператор")
 		return
-	} // todo validate
+	}
+
+	var result float64
 
 	switch operation {
-
-	}
-	var result float64
-	if operation == "+" {
-		result = operand1 + operand2
-	} else if operation == "-" {
-		result = operand1 - operand2
-	} else if operation == "*" {
-		result = operand1 * operand2
-	} else if operation == "/" {
-		result = operand1 / operand2
-		if operand1 == 0 || operand2 == 0 {
-			fmt.Print("Даная операция с цифрой 0 невозможна")
+	case "+":
+		result = a + b
+	case "-":
+		result = a - b
+	case "*":
+		result = a * b
+	case "/":
+		result = a / b
+		if a == 0 || b == 0 {
+			fmt.Println("Данная операция не может быть выполнена")
 			return
-		} //  todo validate
-	} else {
-		fmt.Println("Введена неизвестная операция")
+		}
+	default:
+		println("некорректная операция!")
 		os.Exit(1)
 	}
 
-	fmt.Printf("Результат = %.2f\n", result)
+	fmt.Println("Результат вычисления равен:", result)
 }
-
 func main() {
-	SayHello()
-
-	Calc()
-
-	s := "Hallo Мир"
-
-	for pos, c := range s {
-		fmt.Printf("%d: %c (%d)\n", pos, c, c)
-	}
-	fmt.Println("===========")
-
-	for pos, c := range []byte(s) {
-		fmt.Printf("%d: %c (%d)\n", pos, c, c)
-	}
-
+	calculator()
 }
