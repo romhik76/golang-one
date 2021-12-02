@@ -48,7 +48,6 @@ func calculator() {
 		}
 	case "^":
 		result = math.Pow(a, b)
-
 	default:
 		println("некорректная операция!")
 		os.Exit(1)
