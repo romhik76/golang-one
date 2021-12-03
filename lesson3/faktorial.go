@@ -22,7 +22,7 @@ func calcFactorial() {
 		return
 	}
 
-	println("Введите оператор (+, -, *, /, ^(возведение в степень a=возводимое число,b=степень), R: ")
+	println("Введите оператор (+, -, *, /, F(определение факториала от числа a): ")
 	var operation string
 	_, err = fmt.Scan(&operation)
 	if err != nil {
