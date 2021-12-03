@@ -41,11 +41,11 @@ func calculator() {
 	case "*":
 		result = a * b
 	case "/":
-		result = a / b
-		if a == 0 || b == 0 {
+		if b == 0 {
 			fmt.Println("Данная операция не может быть выполнена")
 			return
 		}
+		result = a / b
 	case "^":
 		result = math.Pow(a, b)
 	default:
