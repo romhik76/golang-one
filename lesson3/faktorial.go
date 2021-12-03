@@ -2,26 +2,21 @@ package main
 
 import (
 	"fmt"
-	"math"
 	"os"
 )
 
-func main() {
-	calculator()
-}
-
-func calculator() {
+func calcFactorial() {
 	fmt.Println("Введите первое значение: ")
-	var a float64
-	_, err := fmt.Scanf("%f", &a)
+	var a int
+	_, err := fmt.Scan(&a)
 	if err != nil {
 		fmt.Println("Введен неверный операнд")
 		return
 	}
 
 	fmt.Println("Введите второе значение: ")
-	var b float64
-	_, err = fmt.Scanf("%f", &b)
+	var b int
+	_, err = fmt.Scan(&b)
 	if err != nil {
 		fmt.Println("Введен неверный операнд")
 		return
@@ -35,7 +30,7 @@ func calculator() {
 		return
 	}
 
-	var result float64
+	var result int
 
 	switch operation {
 	case "+":
@@ -50,12 +45,24 @@ func calculator() {
 			return
 		}
 		result = a / b
-	case "^":
-		result = math.Pow(a, b)
+	case "F":
+		result = factorial(a)
 	default:
 		println("некорректная операция!")
 		os.Exit(1)
 	}
 
-	fmt.Printf("Результат вычисления равен: %.2f\n", result)
+	fmt.Printf("Результат вычисления равен: ", result)
+}
+
+func factorial(n int) int {
+	sum := 1
+	for i := 2; i <= n; i++ {
+		sum *= i
+	}
+	return sum
+}
+
+func main() {
+	calcFactorial()
 }
