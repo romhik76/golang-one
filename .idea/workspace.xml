@@ -4,8 +4,15 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9655006b-4d27-4638-a780-49d39cc07066" name="Changes" comment="factorial">
-      <change beforePath="$PROJECT_DIR$/lesson3/faktorial.go" beforeDir="false" afterPath="$PROJECT_DIR$/lesson3/faktorial.go" afterDir="false" />
+    <list default="true" id="9655006b-4d27-4638-a780-49d39cc07066" name="Changes" comment="idea delete">
+      <change afterPath="$PROJECT_DIR$/lesson1/taast.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/golang-one.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_12_2021_11_40_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_02_12_2021_11_40__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,11 +26,11 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" url="file://$PROJECT_DIR$/../../../Program Files/Go" />
+  <component name="GOROOT" url="file://C:/Program Files/Go" />
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="task_4" />
+        <entry key="$PROJECT_DIR$" value="task_5" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -113,11 +120,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build task_4.go" />
         <item itemvalue="Go Build.go build task_3.go" />
         <item itemvalue="Go Build.go build number.go" />
         <item itemvalue="Go Build.go build calculator_circle.go" />
         <item itemvalue="Go Build.go build task_4.go" />
-        <item itemvalue="Go Build.go build task_3.go" />
       </list>
     </recent_temporary>
   </component>
@@ -149,7 +156,9 @@
     <MESSAGE value="number" />
     <MESSAGE value="sorting" />
     <MESSAGE value="factorial" />
-    <option name="LAST_COMMIT_MESSAGE" value="factorial" />
+    <MESSAGE value="task_5" />
+    <MESSAGE value="idea delete" />
+    <option name="LAST_COMMIT_MESSAGE" value="idea delete" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
